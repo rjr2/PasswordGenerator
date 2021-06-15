@@ -18,8 +18,10 @@
         </div>
         <div>
           <div>
-            <p>Please enter length (8-128 characters):</p>
-            <input type="text" id="input" maxlength="3" minlength="1">
+            <p>Please select length (8-128 characters):</p>
+            <label for="input"></label>
+            <input type="range" id="input" min="8" max="128" oninput="displayPassLength()">
+            <span id="rangedisplay"></span>
           </div>
           <div>
             <p>Include:</p>
@@ -40,7 +42,7 @@
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
-          ><p>hello world</p></textarea>
+          ></textarea>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
